@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Hub Ultra MAXX</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>🔥 Smart Hub Ultra MAXX</h1>
+    <p class="subhead">Build bots with your voice. Run code in-browser. Rule your domain.</p>
+
+    <section class="auth">
+      <button onclick="alert('Login functionality coming soon!')">🔒 Login</button>
+    </section>
+
+    <section class="mic-control">
+      <button id="mic-btn">🎤 Start Talking</button>
+      <p id="transcription">(Your voice input will appear here)</p>
+    </section>
+
+    <section class="editor-area">
+      <h2>💻 Generated Bot Code:</h2>
+      <textarea id="editor" rows="12" placeholder="Generated code will appear here..."></textarea>
+      <button onclick="runCode()">▶️ Run Code</button>
+      <pre id="output"></pre>
+    </section>
+
+    <section class="component-library">
+      <h2>📦 Component Library</h2>
+      <details>
+        <summary>🌤 Weather API</summary>
+        <code>get_weather(city)</code>
+      </details>
+      <details>
+        <summary>📲 Telegram Bot</summary>
+        <code>send_message(chat_id, message)</code>
+      </details>
+      <details>
+        <summary>🧠 Sentiment AI</summary>
+        <code>predict_sentiment(text)</code>
+      </details>
+    </section>
+
+    <section class="log-area">
+      <h2>📜 Bot Creation Log</h2>
+      <ul id="log"></ul>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/skulpt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/skulpt-stdlib.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Smart Hub Ultra MAXX",
+  "short_name": "UltraMAXX",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "description": "Voice-controlled AI bot builder with real-time Python execution.",
+  "icons": []
+}
