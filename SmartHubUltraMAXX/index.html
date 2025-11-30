@@ -8,45 +8,70 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main>
-    <h1>🔥 Smart Hub Ultra MAXX</h1>
-    <p class="subhead">Build bots with your voice. Run code in-browser. Rule your domain.</p>
+  <main class="page">
+    <header class="hero">
+      <h1>🔥 Smart Hub Ultra MAXX</h1>
+      <p>Voice-controlled AI bot builder with instant in-browser Python execution and modular backend components.</p>
+      <div class="badge-row">
+        <span class="badge">Voice → Code → Deploy</span>
+        <span class="badge">Offline-ready PWA</span>
+        <span class="badge">Low-latency Skulpt runtime</span>
+      </div>
+    </header>
 
-    <section class="auth">
-      <button onclick="alert('Login functionality coming soon!')">🔒 Login</button>
+    <section class="grid two">
+      <section class="panel">
+        <h2>🎤 Voice Ideation</h2>
+        <p class="status" id="transcription">(Your voice input will appear here)</p>
+        <div class="status-row">
+          <button id="mic-btn">Start talking</button>
+          <span class="status" id="voice-status">Ready</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>📡 Performance + Telemetry</h2>
+        <p class="status">Track in-browser execution times and service worker status.</p>
+        <div class="status-row">
+          <span class="status" id="perf">Ready</span>
+          <span class="status" id="sw-status">Prefetching core assets...</span>
+        </div>
+      </section>
     </section>
 
-    <section class="mic-control">
-      <button id="mic-btn">🎤 Start Talking</button>
-      <p id="transcription">(Your voice input will appear here)</p>
+    <section class="grid two">
+      <section class="panel">
+        <h2>💻 Bot Code Workspace</h2>
+        <textarea id="editor" rows="14" placeholder="Generated code will appear here...">print("Ultra MAXX ready. Use the component cards to drop in API snippets.")</textarea>
+        <div class="status-row">
+          <button id="run-btn">▶️ Run code</button>
+          <span class="status">Output appears below</span>
+        </div>
+        <pre id="output"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>📦 Composable Components</h2>
+        <p class="status">Drop-in primitives for sensors, messaging, and ML.</p>
+        <div id="component-library" class="component-list"></div>
+      </section>
     </section>
 
-    <section class="editor-area">
-      <h2>💻 Generated Bot Code:</h2>
-      <textarea id="editor" rows="12" placeholder="Generated code will appear here..."></textarea>
-      <button onclick="runCode()">▶️ Run Code</button>
-      <pre id="output"></pre>
-    </section>
+    <section class="grid two">
+      <section class="panel">
+        <h2>📜 Activity + Service Health</h2>
+        <ul id="log"></ul>
+      </section>
 
-    <section class="component-library">
-      <h2>📦 Component Library</h2>
-      <details>
-        <summary>🌤 Weather API</summary>
-        <code>get_weather(city)</code>
-      </details>
-      <details>
-        <summary>📲 Telegram Bot</summary>
-        <code>send_message(chat_id, message)</code>
-      </details>
-      <details>
-        <summary>🧠 Sentiment AI</summary>
-        <code>predict_sentiment(text)</code>
-      </details>
-    </section>
-
-    <section class="log-area">
-      <h2>📜 Bot Creation Log</h2>
-      <ul id="log"></ul>
+      <section class="panel">
+        <h2>🧭 Concept Blueprint</h2>
+        <div class="architecture">
+          <p><strong>Capture:</strong> Voice prompts become structured bot plans with optional templated components.</p>
+          <p><strong>Compose:</strong> Mix weather, messaging, and ML modules for fast iterations.</p>
+          <p><strong>Execute:</strong> Skulpt runs Python in-browser while the Flask backend powers sentiment ML.</p>
+          <p><strong>Deliver:</strong> Offline-first PWA shell with cached assets for faster reloads.</p>
+        </div>
+      </section>
     </section>
   </main>
 
