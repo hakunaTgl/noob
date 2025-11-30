@@ -176,6 +176,12 @@ pre {
   color: var(--muted);
 }
 
+.utility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
 .architecture {
   display: grid;
   gap: 8px;
