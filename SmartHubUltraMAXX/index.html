@@ -16,6 +16,7 @@
         <span class="badge">Voice → Code → Deploy</span>
         <span class="badge">Offline-ready PWA</span>
         <span class="badge">Low-latency Skulpt runtime</span>
+        <span class="badge">Backend blueprints on-demand</span>
       </div>
     </header>
 
@@ -51,15 +52,59 @@
       </section>
 
       <section class="panel">
-        <h2>📦 Composable Components</h2>
+        <div class="panel-header">
+          <h2>📦 Composable Components</h2>
+          <input id="component-search" type="search" placeholder="Search snippets or tags" />
+        </div>
         <p class="status">Drop-in primitives for sensors, messaging, and ML.</p>
         <div id="component-library" class="component-list"></div>
+      </section>
+    </section>
+
+    <section class="grid three">
+      <section class="panel">
+        <h2>⚡ Run Telemetry</h2>
+        <p class="status">Speed and stability insights for recent in-browser executions.</p>
+        <div class="metrics-grid">
+          <div>
+            <p class="metric-label">Successful runs</p>
+            <p class="metric-value" id="run-count">0</p>
+          </div>
+          <div>
+            <p class="metric-label">Failures</p>
+            <p class="metric-value" id="fail-count">0</p>
+          </div>
+          <div>
+            <p class="metric-label">Average time</p>
+            <p class="metric-value" id="avg-run">—</p>
+          </div>
+          <div>
+            <p class="metric-label">Last run</p>
+            <p class="metric-value" id="last-run">—</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>⚙️ Quick Templates</h2>
+        <p class="status">Start from curated flows that fuse frontend + backend blocks.</p>
+        <div id="template-list" class="component-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>🛰 Backend Assistants</h2>
+        <p class="status">Call backend helpers with one click snippets.</p>
+        <div id="backend-assistants" class="component-list"></div>
       </section>
     </section>
 
     <section class="grid two">
       <section class="panel">
         <h2>📜 Activity + Service Health</h2>
+        <div class="health-grid">
+          <div class="health-chip" id="health-backend">Backend: probing...</div>
+          <div class="health-chip" id="health-sw">Service worker: pending...</div>
+        </div>
         <ul id="log"></ul>
       </section>
 
@@ -71,6 +116,11 @@
           <p><strong>Execute:</strong> Skulpt runs Python in-browser while the Flask backend powers sentiment ML.</p>
           <p><strong>Deliver:</strong> Offline-first PWA shell with cached assets for faster reloads.</p>
         </div>
+        <div class="blueprint-controls">
+          <input id="blueprint-idea" type="text" placeholder="Describe the assistant you want..." />
+          <button id="blueprint-btn">Generate backend blueprint</button>
+        </div>
+        <div id="blueprint-output" class="blueprint-output">Blueprint will appear here.</div>
       </section>
     </section>
   </main>
