@@ -10,12 +10,21 @@
 <body>
   <main class="page">
     <header class="hero">
-      <h1>🔥 Smart Hub Ultra MAXX</h1>
-      <p>Voice-controlled AI bot builder with instant in-browser Python execution and modular backend components.</p>
+      <div class="hero-top">
+        <div>
+          <h1>🔥 Smart Hub Ultra MAXX</h1>
+          <p>Voice-controlled AI bot builder with instant in-browser Python execution and modular backend components.</p>
+        </div>
+        <div class="hero-actions">
+          <button id="clear-editor" class="secondary">Clear editor</button>
+          <button id="save-draft">Save draft</button>
+        </div>
+      </div>
       <div class="badge-row">
         <span class="badge">Voice → Code → Deploy</span>
         <span class="badge">Offline-ready PWA</span>
         <span class="badge">Low-latency Skulpt runtime</span>
+        <span class="badge">Telemetry baked-in</span>
       </div>
     </header>
 
@@ -45,7 +54,10 @@
         <textarea id="editor" rows="14" placeholder="Generated code will appear here...">print("Ultra MAXX ready. Use the component cards to drop in API snippets.")</textarea>
         <div class="status-row">
           <button id="run-btn">▶️ Run code</button>
-          <span class="status">Output appears below</span>
+          <div class="mini-actions">
+            <button id="copy-btn" class="secondary">Copy</button>
+            <span class="status">Output appears below</span>
+          </div>
         </div>
         <pre id="output"></pre>
       </section>
@@ -54,6 +66,45 @@
         <h2>📦 Composable Components</h2>
         <p class="status">Drop-in primitives for sensors, messaging, and ML.</p>
         <div id="component-library" class="component-list"></div>
+      </section>
+    </section>
+
+    <section class="grid three">
+      <section class="panel">
+        <h2>⚡ Quick Templates</h2>
+        <p class="status">Jumpstart with runnable scaffolds.</p>
+        <div id="template-library" class="template-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>📊 Run Telemetry & Insights</h2>
+        <div class="stat-grid">
+          <div class="stat">
+            <p class="label">Total runs</p>
+            <p id="run-count" class="value">0</p>
+          </div>
+          <div class="stat">
+            <p class="label">Last latency</p>
+            <p id="run-latency" class="value">–</p>
+          </div>
+          <div class="stat">
+            <p class="label">Health</p>
+            <p id="health-state" class="value success">Ready</p>
+          </div>
+        </div>
+        <div class="status-row">
+          <span class="status" id="perf">Waiting for first run</span>
+          <button id="download-log" class="secondary">Download log</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>🧩 Backend Assistants</h2>
+        <ul class="assistant-list">
+          <li><strong>Sentiment ML</strong><span class="pill">Local Flask</span><span class="pill success">Live</span></li>
+          <li><strong>Webhook Relay</strong><span class="pill">Retry queue</span><span class="pill warning">Queued</span></li>
+          <li><strong>Telemetry Export</strong><span class="pill">NDJSON</span><span class="pill muted">Idle</span></li>
+        </ul>
       </section>
     </section>
 
@@ -68,8 +119,9 @@
         <div class="architecture">
           <p><strong>Capture:</strong> Voice prompts become structured bot plans with optional templated components.</p>
           <p><strong>Compose:</strong> Mix weather, messaging, and ML modules for fast iterations.</p>
-          <p><strong>Execute:</strong> Skulpt runs Python in-browser while the Flask backend powers sentiment ML.</p>
-          <p><strong>Deliver:</strong> Offline-first PWA shell with cached assets for faster reloads.</p>
+          <p><strong>Execute:</strong> Skulpt runs Python in-browser while the Flask backend powers sentiment ML and webhooks.</p>
+          <p><strong>Deliver:</strong> Offline-first PWA shell with cached assets, telemetry, and exportable logs.</p>
+          <div class="timeline" id="timeline"></div>
         </div>
       </section>
     </section>
