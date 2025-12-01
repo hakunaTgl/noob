@@ -57,6 +57,10 @@ header.hero p {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+.grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
 .panel {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -69,6 +73,22 @@ header.hero p {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.panel-header input {
+  background: #0b0f20;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 10px 12px;
+  width: 180px;
 }
 
 button {
@@ -186,6 +206,71 @@ pre {
   color: var(--text);
 }
 
+.blueprint-controls {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.blueprint-controls input {
+  flex: 1;
+  padding: 10px 12px;
+  background: #090c1a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.blueprint-output {
+  border: 1px solid var(--border);
+  background: #0a0d1d;
+  border-radius: 12px;
+  padding: 12px;
+  color: var(--text);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.metric-label {
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.health-chip {
+  background: rgba(123, 93, 255, 0.16);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--text);
+}
+
+.health-chip[data-ok="false"] {
+  background: rgba(250, 82, 82, 0.16);
+  border-color: rgba(250, 82, 82, 0.4);
+}
+
+.health-chip[data-ok="true"] {
+  background: rgba(74, 222, 128, 0.18);
+  border-color: rgba(74, 222, 128, 0.5);
+}
+
 .badge-row {
   display: flex;
   gap: 10px;
@@ -197,6 +282,21 @@ pre {
   border: 1px solid var(--border);
   color: var(--text);
   padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 4px 10px;
   border-radius: 999px;
   font-size: 12px;
 }
