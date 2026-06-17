@@ -12,8 +12,9 @@
 - 🎤 Voice-based bot creation with live status feedback
 - 🧠 Run Python in-browser (Skulpt) with runtime telemetry
 - 📦 Click-to-insert component snippets
-- 🧬 Flask ML backend
-- 🗃 Bot creation log
+- ⚙️ Quick-start templates and backend assistant snippets
+- 🧬 Flask ML backend with health and blueprint endpoints
+- 🗃 Bot creation log + service health overlays
 - 📡 Service worker caching for faster startup
 
 ## Use
