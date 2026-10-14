@@ -1,6 +1,6 @@
 # noob
 
-A Python experimentation workspace containing the `SmartHubUltraMAXX` package.
+An experimentation workspace containing the `SmartHubUltraMAXX` application directory with Python backend code and HTML/JS/CSS assets.
 
 > Status: scaffold / early development. The repository structure exists, but runtime behavior and supported features must be verified before production use.
 
@@ -17,12 +17,12 @@ cd noob
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt -r SmartHubUltraMAXX/requirements.txt
 ```
 
 ## Run
 
-Inspect the package entry points before execution:
+Inspect the application entry points before execution:
 
 ```bash
 find SmartHubUltraMAXX -maxdepth 2 -type f | sort
@@ -32,8 +32,9 @@ No stable CLI or service entry point is documented yet. Add one before marking t
 
 ## Repository map
 
-- `SmartHubUltraMAXX/` — application package
-- `requirements.txt` — Python dependencies
+- `SmartHubUltraMAXX/` — application directory
+- `requirements.txt` — root Python dependencies
+- `SmartHubUltraMAXX/requirements.txt` — application dependencies, including `joblib`
 
 ## Completion checklist
 
